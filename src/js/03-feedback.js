@@ -15,6 +15,8 @@ function OnFormInput(e) {
   localStorage.setItem('feedback-form-state', JSON.stringify(localStorageObj));
 }
 
+populateInputForm();
+
 function populateInputForm() {
   const savedInputValue = JSON.parse(localStorage.getItem('feedback-form-state'));
   const { email, message } = savedInputValue;
@@ -27,8 +29,6 @@ function populateInputForm() {
     formEl.message.value = message;
   }
 }
-
-populateInputForm();
 
 function onSubmitForm(e) {
   e.preventDefault();
