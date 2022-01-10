@@ -37,7 +37,7 @@ function onSubmitForm(e) {
   const email = formEl.email.value;
   const message = formEl.message.value;
 
-  if (email && message) {
+  if (email === '' || message === '') {
     return;
   }
 
